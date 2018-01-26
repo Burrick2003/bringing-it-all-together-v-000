@@ -71,4 +71,5 @@ attr_accessor :id, :name, :breed
             sql = "DROP TABLE IF EXISTS dogs"
             DB[:conn].execute(sql)
   end
+
 end#Dog
