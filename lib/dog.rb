@@ -7,6 +7,10 @@ attr_accessor :id, :name, :breed
     @breed=breed
   end
 
+  def self.new_from_db(row)
+      self.new(row[0], row[1], row[2])
+  end
+
   def self.create(name:, breed:)
         newdog = Dog.new(name: name, breed: breed)
         newdog.save
